@@ -16,16 +16,6 @@
     -ms-flex-direction: row;
     flex-direction: row;
   }
-  .sidebar__main {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    margin-right: 2.5em;
-  }
-}
-@media (min-width: 80em) {
-  .sidebar__main {
-    margin-right: 5em;
-  }
 }
 [class^="lay"] {
   width: 100%;
