@@ -5,13 +5,13 @@ import "./Banner.css";
 function Banner() {
   return (
     <React.Fragment>
-      <div class="banner w-100 --bg-banner">
-        <div class="banner --top --desktop"></div>
-        <div class="banner --top --tablet sf-hidden"></div>
-        <div class="banner --top --mobile sf-hidden"></div>
+      <div className="banner w-100 --bg-banner">
+        <div className="banner --top --desktop"></div>
+        <div className="banner --top --tablet sf-hidden"></div>
+        <div className="banner --top --mobile sf-hidden"></div>
       </div>
-      <div class="banner w-100 --bg-banner">
-        <div class="banner --sticky --mobile sf-hidden"></div>
+      <div className="banner w-100 --bg-banner">
+        <div className="banner --sticky --mobile sf-hidden"></div>
       </div>
     </React.Fragment>
   );
