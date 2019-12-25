@@ -21,12 +21,6 @@
     flex-basis: 100%;
     margin-right: 2.5em;
   }
-  .sidebar__aside {
-    -ms-flex-preferred-size: 18.75em;
-    flex-basis: 18.75em;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-  }
 }
 @media (min-width: 80em) {
   .sidebar__main {

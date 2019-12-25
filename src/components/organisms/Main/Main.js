@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./Main.css";
-import "../../../global.css";
 
 import GridHeader from "../GridHeader/GridHeader";
+import SidebarAside from "../SidebarAside/SidebarAside";
 
 function Main() {
   return (
@@ -12,7 +12,7 @@ function Main() {
         <div class="sidebar__main">
           <GridHeader />
         </div>
-        <div class="sidebar__aside"></div>
+        <SidebarAside />
       </div>
     </React.Fragment>
   );
