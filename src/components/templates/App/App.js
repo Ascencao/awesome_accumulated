@@ -1,7 +1,7 @@
 import React from "react";
 
 import Banner from "../../organisms/Banner/Banner";
-import GridHeader from "../../organisms/GridHeader/GridHeader";
+import Main from "../../organisms/Main/Main";
 
 import "./App.css";
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <main className="App">
       <Banner />
-      <GridHeader />
+      <Main></Main>
     </main>
   );
 }
