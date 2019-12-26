@@ -2,9 +2,10 @@ import React from "react";
 
 import GridHeader from "../GridHeader/GridHeader";
 import headerData from "./header.json";
+import CardArticleImage from "../../atoms/CardArticleImage/CardArticleImage";
+import CardArticleTitle from "../../atoms/CardArticleTitle/CardArticleTitle";
 
 import "./SidebarMain.css";
-import CardArticleImage from "../../atoms/CardArticleImage/CardArticleImage";
 
 function SidebarMain() {
   return (
@@ -19,6 +20,13 @@ function SidebarMain() {
               className=""
               url="/"
             ></CardArticleImage>
+            <div class="mod-caja-nota__descrip">
+              <CardArticleTitle
+                title="La escuela. que tiene de escudo al Che Guevara y donde izan la bandera de Cuba"
+                url="/"
+              ></CardArticleTitle>
+              <h4 class="com-date">1 de Julio de 2019</h4>
+            </div>
           </article>
         </section>
       </div>

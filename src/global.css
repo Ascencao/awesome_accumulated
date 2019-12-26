@@ -33,6 +33,12 @@ body {
 ol {
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
