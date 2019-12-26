@@ -16,3 +16,68 @@
     margin-right: 5em;
   }
 }
+
+[class^="row-gap"] {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 0.625em;
+  grid-row-gap: 1.875em;
+}
+@media (min-width: 22em) {
+  [class^="row-gap"] {
+    grid-column-gap: 1.25em;
+    grid-row-gap: 1.25em;
+  }
+}
+@media (min-width: 48em) {
+  [class^="row-gap"] {
+    grid-column-gap: 1.875em;
+    grid-row-gap: 1.875em;
+  }
+}
+@media (min-width: 64em) {
+  [class^="row-gap"] {
+    grid-column-gap: 2.5em;
+    grid-row-gap: 2.5em;
+  }
+}
+@media (min-width: 48em) {
+  .row-gap-tablet-2 {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 80em) {
+  .row-gap-deskxl-3 {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.mod-caja-nota {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.mod-caja-nota.w-100-mobile .mod-caja-nota__descrip {
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+}
+@media (min-width: 22em) {
+  .mod-caja-nota.w-100-mobile .mod-caja-nota__descrip {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+}
+@media (min-width: 48em) {
+  .mod-caja-nota.w-100-mobile .mod-caja-nota__descrip {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
