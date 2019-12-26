@@ -8,7 +8,7 @@ import SidebarMain from "../SidebarMain/SidebarMain";
 function Main() {
   return (
     <React.Fragment>
-      <div class="lay-sidebar">
+      <div className="lay-sidebar">
         <SidebarMain />
         <SidebarAside />
       </div>

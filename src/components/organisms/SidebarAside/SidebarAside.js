@@ -5,8 +5,8 @@ import "./SidebarAside.css";
 function SidebarAside() {
   return (
     <React.Fragment>
-      <div class="sidebar__aside">
-        <div class="sidebar --desktop --large"></div>
+      <div className="sidebar__aside">
+        <div className="sidebar --desktop --large"></div>
       </div>
     </React.Fragment>
   );
