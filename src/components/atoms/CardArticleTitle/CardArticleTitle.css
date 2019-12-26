@@ -1,0 +1,32 @@
+.com-title-acu {
+  font-family: "Arial", "sans-serif";
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #000;
+  margin-top: 0.4375em;
+}
+.com-title-acu b {
+  font-weight: 600;
+}
+@media (min-width: 360px) {
+  .com-title-acu {
+    font-family: "SuecaSlab", "Georgia", "serif";
+    font-size: 1.0625rem;
+    line-height: 1.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .com-title-acu {
+    font-family: "SuecaSlab", "Georgia", "serif";
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.4px;
+  }
+}
+@media (min-width: 1024px) {
+  .com-title-acu {
+    font-size: 1.0625rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.4px;
+  }
+}
