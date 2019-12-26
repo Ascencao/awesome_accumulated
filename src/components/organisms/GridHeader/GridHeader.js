@@ -1,35 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./GridHeader.css";
 import "../../../global.css";
 
-function GridHeader() {
+function GridHeader(props) {
+  const labels = props.labels.map((label, id) => {
+    return (
+      <Link className="text-decoration-none" key={id} src={label.url}>
+        {label.title}
+      </Link>
+    );
+  });
   return (
     <React.Fragment>
       <div>
         <div className="com-titleWithfollow hlp-marginBottom-15">
           <h1 className="com-title-section-xl hlp-marginBottom-40">
-            Acumulado Grilla
+            {props.title}
           </h1>
         </div>
       </div>
       <div>
         <div className="cont_tags com-secondary-tag hlp-marginBottom-20">
-          <a href="http://especiales.lanacion.com.ar/arc-css/acumulado.asp">
-            Platos principales
-          </a>
-          <a href="http://especiales.lanacion.com.ar/arc-css/acumulado.asp">
-            Cerdo
-          </a>
-          <a href="http://especiales.lanacion.com.ar/arc-css/acumulado.asp">
-            Papas
-          </a>
-          <a href="http://especiales.lanacion.com.ar/arc-css/acumulado.asp">
-            Date un gustito
-          </a>
-          <a href="http://especiales.lanacion.com.ar/arc-css/acumulado.asp">
-            La familia
-          </a>
+          {labels}
         </div>
       </div>
     </React.Fragment>

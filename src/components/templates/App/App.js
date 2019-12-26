@@ -1,16 +1,15 @@
 import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Banner from "../../organisms/Banner/Banner";
-import Main from "../../organisms/Main/Main";
-
-import "./App.css";
+import Home from "../../../pages/Home";
 
 function App() {
   return (
-    <main className="App">
-      <Banner />
-      <Main></Main>
-    </main>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
