@@ -1,26 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./GridHeader.css";
 import "../../../global.css";
 
 function GridHeader(props) {
-  const labels = tagList => {
-    tagList.map((label, id) => {
-      return (
-        <Link className="text-decoration-none" key={id} to={label.slug}>
-          {label.text}
-        </Link>
-      );
-    });
-  };
+  const [labels, setLabels] = useState([]);
 
   useEffect(() => {
-    if (props.labels) {
-      console.log(props.labels);
-      labels(props.labels);
-    }
-  });
+    console.log("TCL: GridHeader -> props.labels", props.labels)
+    setLabels((tagList => (
+        tagList.map((label, id) => (
+        <Link className="text-decoration-none" key={id} to={`/tema/${label.slug}`}>
+            {label.text}
+        </Link>
+        ))
+    )
+    )(props.labels || []));
+  }, [props.labels]);
 
   return (
     <React.Fragment>
