@@ -6,7 +6,7 @@ import "./CardArticleTitle.css";
 function CardArticleTitle(props) {
   return (
     <React.Fragment>
-      <h2 class="com-title-acu">
+      <h2 className="com-title-acu">
         <a href={props.url}>
           <b>{props.title}</b>
         </a>
