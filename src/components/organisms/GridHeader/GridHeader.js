@@ -1,10 +1,13 @@
+
 import React, { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom";
 
 import "./GridHeader.css";
 import "../../../global.css";
 
 function GridHeader(props) {
+
   const [labels, setLabels] = useState([]);
 
   useEffect(() => {
