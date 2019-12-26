@@ -13,7 +13,6 @@ function CardArticle(props) {
         <CardArticleImage
           src={props.image}
           alt={props.title}
-          className=""
           url={props.url}
         ></CardArticleImage>
         <div className="mod-caja-nota__descrip">

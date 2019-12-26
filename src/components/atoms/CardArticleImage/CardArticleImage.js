@@ -7,12 +7,12 @@ function CardArticleImage(props) {
   return (
     <React.Fragment>
       <section className="cont-figure">
-        <Link src={props.url} className="figure">
+        <Link to={props.url} className="figure">
           <picture className="content-pic picture">
             <img
               src={props.src}
               alt={props.alt}
-              className={"content-img figure-image".concat(props.className)}
+              className={"content-img figure-image ".concat(props.className)}
             />
           </picture>
         </Link>

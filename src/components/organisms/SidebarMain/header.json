@@ -2,24 +2,24 @@
   "title": "Acumulado Grilla",
   "labels": [
     {
-      "title": "Platos principales",
-      "url": "/"
+      "text": "Platos principales",
+      "slug": "/"
     },
     {
-      "title": "Cerdo",
-      "url": "/"
+      "text": "Cerdo",
+      "slug": "/"
     },
     {
-      "title": "Papas",
-      "url": "/"
+      "text": "Papas",
+      "slug": "/"
     },
     {
-      "title": "Date un gustito",
-      "url": "/"
+      "text": "Date un gustito",
+      "slug": "/"
     },
     {
-      "title": "La familia",
-      "url": "/"
+      "text": "La familia",
+      "slug": "/"
     }
   ]
 }
