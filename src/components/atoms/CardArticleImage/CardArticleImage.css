@@ -1,0 +1,89 @@
+.cont-figure {
+  background-color: #f2f2f2;
+}
+.cont-figure .figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.cont-figure .figure:hover {
+  opacity: 1;
+}
+.cont-figure .figure .picture {
+  padding-top: calc((2 / 3) * 100%);
+}
+.cont-figure .figure .content-pic {
+  width: 100%;
+  background: #f2f2f2;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.cont-figure .figure .content-pic > * {
+  z-index: 1;
+}
+.cont-figure .figure .content-pic .content-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.cont-figure .figure .content-pic .content-img:hover {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-filter: brightness(110%);
+  filter: brightness(110%);
+}
+article a.figure {
+  position: relative;
+  background-color: #f2f2f2;
+}
+article a.figure:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+  opacity: 0.5;
+  font-family: "LNlogos" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e926";
+  font-size: 1vw;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+.figure-image {
+  background-blend-mode: normal !important;
+  background-clip: content-box !important;
+  background-position: 50% 50% !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  background-image: var(--sf-img-21) !important;
+  background-size: 100% 100% !important;
+  background-origin: content-box !important;
+  background-repeat: no-repeat !important;
+}
