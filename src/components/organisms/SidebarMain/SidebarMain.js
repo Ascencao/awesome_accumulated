@@ -4,13 +4,47 @@ import GridHeader from "../GridHeader/GridHeader";
 import CardArticle from "../../molecules/CardArticle/CardArticle";
 
 import headerData from "./header.json";
-import gridData from "./grid.json";
 
 import "./SidebarMain.css";
 
-function SidebarMain() {
-  const articles = gridData.articles.map((article, id) => {
-    if (article.subtype == "7") {
+class SidebarMain extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: undefined,
+      loading: true,
+      error: null
+    };
+  }
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async () => {
+    this.setState({ loading: true, error: null });
+
+    try {
+      const response = await fetch(
+        "https://api-test-ln.herokuapp.com/articles"
+      );
+
+      const json = await response.json();
+
+      const articles = await json.articles.filter(
+        article => article.subtype === "7"
+      );
+
+      this.createCardArticles(articles);
+
+      this.setState({ loading: false, data: articles });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
+
+  createCardArticles = articles => {
+    this.articles = articles.map((article, id) => {
       return (
         <CardArticle
           key={id}
@@ -20,19 +54,21 @@ function SidebarMain() {
           url={article.website_url}
         ></CardArticle>
       );
-    }
-  });
+    });
+  };
 
-  return (
-    <React.Fragment>
-      <div className="sidebar__main">
-        <GridHeader title={headerData.title} labels={headerData.labels} />
-        <section className="row-gap-tablet-2 row-gap-deskxl-3 hlp-degrade">
-          {articles}
-        </section>
-      </div>
-    </React.Fragment>
-  );
+  render() {
+    return (
+      <React.Fragment>
+        <div className="sidebar__main">
+          <GridHeader title={headerData.title} labels={headerData.labels} />
+          <section className="row-gap-tablet-2 row-gap-deskxl-3 hlp-degrade">
+            {this.articles}
+          </section>
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
 export default SidebarMain;

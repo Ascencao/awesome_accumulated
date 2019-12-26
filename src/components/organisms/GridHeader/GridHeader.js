@@ -7,7 +7,7 @@ import "../../../global.css";
 function GridHeader(props) {
   const labels = props.labels.map((label, id) => {
     return (
-      <Link className="text-decoration-none" key={id} src={label.url}>
+      <Link className="text-decoration-none" key={id} to={label.url}>
         {label.title}
       </Link>
     );
